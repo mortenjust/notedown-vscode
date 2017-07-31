@@ -71,7 +71,8 @@
       "name": "notes.person",    
       "scope": "notes.person",  
       "settings": {
-        "foreground" : "#61AFEF" //
+        "foreground" : "#61AFEF",
+        "fontSize" : "70px" //
       }
     },
 
