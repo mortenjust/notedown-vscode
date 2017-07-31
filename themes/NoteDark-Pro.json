@@ -67,13 +67,32 @@
   "tokenColors": [
 
 
-        { 
+    { 
       "name": "notes.person",    
       "scope": "notes.person",  
+      "settings": {
+        "foreground" : "#61AFEF" //
+      }
+    },
+
+
+    { 
+      "name": "notes.tag",    
+      "scope": "notes.tag",  
+      "settings": {
+        "foreground" : "#C678DD", // pur
+        "fontStyle" : "bold"
+      }
+    },
+
+    { 
+      "name": "notes.person.plussed",    
+      "scope": "notes.person.plussed",  
       "settings": {
         "foreground" : "#C678DD" // purp
       }
     },
+
 
         { 
       "name": "notes.brackets",    
@@ -82,6 +101,26 @@
         "foreground" : "#5C6370" // gray, like a comment
       }
     },
+    
+
+        { 
+      "name": "notes.todo",    
+      "scope": "notes.todo",  
+      "settings": {
+        "foreground" : "#61AFEF", // 
+        "fontStyle": "bold"
+      }
+    },
+
+ { 
+      "name": "notes.todo.done",    
+      "scope": "notes.todo.done",  
+      "settings": {
+        "foreground" : "#5C6370",
+         "fontStyle": "regular"
+      }
+    },
+
 
 
         { 

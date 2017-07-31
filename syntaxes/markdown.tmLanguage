@@ -16,25 +16,58 @@
 	
 	<key>patterns</key>
         <array>
+
+				
+			<!-- Brackets gray  -->
+            <dict>
+                <key>name</key>
+                <string>notes.brackets</string>
+
+                <key>begin</key>
+				<string>\(</string>
+
+				<key>end</key>
+				<string>\)</string>
+            </dict>  
         
+
+				
+			<!-- tags  -->
+            <dict>
+                <key>name</key>
+                <string>notes.tag</string>
+				<key>match</key>
+				<string>.\#\w+</string>
+            </dict>  
+
 			<!-- Plussed names  -->
             <dict>
                 <key>name</key>
-                <string>notes.person</string>
+                <string>notes.person.plussed</string>
 
 				<key>match</key>
 				<string>\+[A-Za-z]+</string>
             </dict>     
 
-
-			<!-- Except new lines and list items  -->
+        
+			<!-- TODOs  -->
             <dict>
                 <key>name</key>
-                <string>notes.brackets</string>
+                <string>notes.todo</string>
 
 				<key>match</key>
-				<string>\n([A-Z][a-z]*)</string>
-            </dict>   
+				<string>\[ \].+</string>
+            </dict>     
+            <dict>
+                <key>name</key>
+                <string>notes.todo.done</string>
+
+				<key>match</key>
+				<string>\[x\].+</string>
+            </dict>     
+
+
+
 
 			<!-- Capitalized words  -->
             <dict>
@@ -42,12 +75,12 @@
                 <string>notes.person</string>
 
 				<key>match</key>
-				<string>([A-Z][a-z]*)</string>
+				<string>(?<=\w[ ])([A-Z][a-z]*)</string>
             </dict>   
 
-
-
-
+	<!--(?<=\w[ ])([A-Z][a-z]*)  
+	([A-Z][a-z]*)
+	-->
 
 
 			<!-- -'s  -->
@@ -87,18 +120,7 @@
 				<key>end</key>
 				<string>"</string>
             </dict>       			
-			
-			<!-- Brackets gray  -->
-            <dict>
-                <key>name</key>
-                <string>notes.brackets</string>
-
-                <key>begin</key>
-				<string>\(</string>
-
-				<key>end</key>
-				<string>\)</string>
-            </dict>       
+	     
 
 
 
@@ -493,108 +515,7 @@
 
 	<!-- inline images  -->
 
-	<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
-						</dict>
-						<key>10</key>
-						<dict>
-							<key>name</key>
-							<string>string.other.link.description.title.markdown</string>
-						</dict>
-						<key>11</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.string.markdown</string>
-						</dict>
-						<key>12</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.string.markdown</string>
-						</dict>
-						<key>13</key>
-						<dict>
-							<key>name</key>
-							<string>string.other.link.description.title.markdown</string>
-						</dict>
-						<key>14</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.string.markdown</string>
-						</dict>
-						<key>15</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.string.markdown</string>
-						</dict>
-						<key>16</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.metadata.markdown</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>string.other.link.description.markdown</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>invalid.illegal.whitespace.markdown</string>
-						</dict>
-						<key>6</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.metadata.markdown</string>
-						</dict>
-						<key>7</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
-						</dict>
-						<key>8</key>
-						<dict>
-							<key>name</key>
-							<string>markup.underline.link.image.markdown</string>
-						</dict>
-						<key>9</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>(?x:
-						(\!\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])
-													# Match the link text.
-						([ ])?						# Space not allowed
-						(\()						# Opening paren for url
-							(&lt;?)(\S+?)(&gt;?)			# The url
-							[ \t]*					# Optional whitespace
-							(?:
-								  ((\().+?(\)))		# Match title in parens…
-								| ((").+?("))		# or in quotes.
-							)?						# Title is optional
-							\s*						# Optional whitespace
-						(\))
-					 )</string>
-					<key>name</key>
-					<string>meta.image.inline.markdown</string>
-				</dict>
-
-
 		<!-- bold  -->
-
-
 
 
 
@@ -603,6 +524,7 @@
 		</array>
 
 <!-- repositories --> 
+
 
 
 
