@@ -26,10 +26,19 @@
 				<string>\+[A-Za-z]+</string>
             </dict>     
 
+			<!-- -'s  -->
+            <dict>
+                <key>name</key>
+                <string>notes.person</string>
+
+				<key>match</key>
+				<string>[ ]*-</string>
+            </dict>    
+
 			<!--  -->
             <dict>
                 <key>match</key>
-                <string>\b(?i:(hint|info|information))\b</string>
+                <string>\b(?i:(hmw|HMW|hint|info|information))\b</string>
                 <key>name</key>
                 <string>info-token</string>
             </dict>                
@@ -392,8 +401,8 @@
 				</dict>
 
 	<!--lists  -->
-
-						<dict>
+<!-- 
+		<dict>
 							<key>begin</key>
 							<string>(^|\G)([ ]{0,3})([*+-])([ ]{1,3}|\t)</string>
 							<key>beginCaptures</key>
@@ -404,7 +413,6 @@
 									<string>beginning.punctuation.definition.list.markdown</string>
 								</dict>
 							</dict>
-
 							<key>name</key>
 							<string>markup.list.unnumbered.markdown</string>
 							<key>while</key>
@@ -423,9 +431,35 @@
 							</dict>
 							<key>name</key>
 							<string>markup.list.numbered.markdown</string>
+
 							<key>while</key>
 							<string>((^|\G)([ ]{4}|\t))|(^[ \t]*$)</string>
-						</dict> 
+						</dict> -->
+
+<!--  -->
+
+	<dict>
+					<key>begin</key>
+					<string>(^|\G)(?=\S)(?![*+-]\s|[0-9]+\.\s)</string>
+					<key>name</key>
+					<string>meta.paragraph.markdown</string>
+					
+					<key>while</key>
+					<string>(^|\G)(?!\s*$|#|[ ]{0,3}([-*_][ ]{2,}){3,}[ \t]*$\n?|&gt;|[ ]{0,3}[*+-]|[ ]{0,3}[0-9]+\.)</string>
+				</dict>
+
+<!--  -->
+
+	<dict>
+					<key>begin</key>
+					<string>(^|\G)(?=\S)(?![*+-]\s|[0-9]+\.\s)</string>
+					<key>name</key>
+					<string>meta.paragraph.markdown</string>
+					<key>while</key>
+					<string>(^|\G)(?!\s*$|#|[ ]{0,3}([-*_][ ]{2,}){3,}[ \t]*$\n?|&gt;|[ ]{0,3}[*+-]|[ ]{0,3}[0-9]+\.)</string>
+				</dict>
+
+
 
 	<!-- inline images  -->
 
