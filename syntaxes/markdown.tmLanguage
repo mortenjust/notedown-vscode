@@ -26,16 +26,40 @@
 				<string>\+[A-Za-z]+</string>
             </dict>     
 
+
+			<!-- Except new lines and list items  -->
+            <dict>
+                <key>name</key>
+                <string>notes.brackets</string>
+
+				<key>match</key>
+				<string>\n([A-Z][a-z]*)</string>
+            </dict>   
+
+			<!-- Capitalized words  -->
+            <dict>
+                <key>name</key>
+                <string>notes.person</string>
+
+				<key>match</key>
+				<string>([A-Z][a-z]*)</string>
+            </dict>   
+
+
+
+
+
+
 			<!-- -'s  -->
             <dict>
                 <key>name</key>
                 <string>notes.person</string>
 
 				<key>match</key>
-				<string>[ ]*-</string>
+				<string>[ ]*(\-|\*)</string>
             </dict>    
 
-			<!--  -->
+			<!--  Keywords like hint info  -->
             <dict>
                 <key>match</key>
                 <string>\b(?i:(hmw|HMW|hint|info|information))\b</string>
@@ -75,6 +99,12 @@
 				<key>end</key>
 				<string>\)</string>
             </dict>       
+
+
+
+<!-- original markup  -->
+
+
 
 			<!-- link i-net  -->
 
@@ -292,12 +322,12 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.raw.markdown</string>
+							<string>notes.brackets</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.raw.markdown</string>
+							<string>notes.brackets</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -560,6 +590,10 @@
 					<key>name</key>
 					<string>meta.image.inline.markdown</string>
 				</dict>
+
+
+		<!-- bold  -->
+
 
 
 
