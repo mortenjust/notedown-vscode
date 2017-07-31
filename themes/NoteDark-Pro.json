@@ -65,6 +65,39 @@
     "titleBar.inactiveForeground": "#6B717D"
   },
   "tokenColors": [
+
+
+        { 
+      "name": "notes.person",    
+      "scope": "notes.person",  
+      "settings": {
+        "foreground" : "#C678DD" // purp
+      }
+    },
+
+        { 
+      "name": "notes.brackets",    
+      "scope": "notes.brackets",  
+      "settings": {
+        "foreground" : "#5C6370" // gray, like a comment
+      }
+    },
+
+
+        { 
+      "name": "info-token",    
+      "scope": "info-token",  
+      "settings": {
+        "background": "#FF0000",
+        "foreground" : "#57adb8"
+
+      }
+    },
+
+// added by notedown
+
+
+
     {
       "name": "punctuation.definition",
       "scope": "punctuation.definition.string.begin,punctuation.definition.string.end",
@@ -826,6 +859,15 @@
      {
       "name": "[VSCODE-CUSTOM] Markdown Person",
       "scope": "markup.person.markdown",
+      "settings": {
+        "foreground": "#5C6370",
+        "fontStyle": "italic"
+      }
+    },
+
+       {
+      "name": "[VSCODE-CUSTOM] Markdown Person",
+      "scope": "markup.person",
       "settings": {
         "foreground": "#5C6370",
         "fontStyle": "italic"
