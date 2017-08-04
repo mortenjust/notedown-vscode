@@ -17,6 +17,11 @@
             "extensions": [".md",".mdown",".markdown",".markdn"],
             "configuration": "./language-configuration.json"
         }],
+            "snippets": [
+        {
+            "language": "markdown",
+            "path": "./snippets/markdown-notes.json"
+        }],
         "grammars": [{
             "language": "markdown",
             "scopeName": "text.html.markdown",
@@ -29,5 +34,6 @@
                     "path": "./themes/NoteDark-Pro.json"
                 }
             ]
+
     }
 }
