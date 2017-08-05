@@ -1,4 +1,9 @@
-{"Insert ☠ Skull and Crossbones": { "prefix": "emoji-Skull and Crossbones ☠", "body": "☠", "description": "Insert ☠ Skull and Crossbones" }, 
+
+{
+    "Create link to current file": { "prefix": "Link to current note", "body": "$TM_FILEPATH", "description": "Insert the link to this note" }, 
+    
+    
+    "Insert ☠ Skull and Crossbones": { "prefix": "emoji-Skull and Crossbones ☠", "body": "☠", "description": "Insert ☠ Skull and Crossbones" }, 
 "Insert 🛀 Person Taking Bath": { "prefix": "emoji-Person Taking Bath 🛀", "body": "🛀", "description": "Insert 🛀 Person Taking Bath" }, 
 "Insert 🛌 Person in Bed": { "prefix": "emoji-Person in Bed 🛌", "body": "🛌", "description": "Insert 🛌 Person in Bed" }, 
 "Insert 💌 Love Letter": { "prefix": "emoji-Love Letter 💌", "body": "💌", "description": "Insert 💌 Love Letter" }, 
