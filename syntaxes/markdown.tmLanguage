@@ -69,6 +69,16 @@
 				<string>\+[A-Za-z]+</string>
             </dict>     
 
+			<!-- Direct quote names  -->
+            <dict>
+                <key>name</key>
+                <string>notes.pling.quote</string>
+
+				<key>match</key>
+				<string>`(.*?)`</string>
+            </dict>     
+
+
 
 			<!-- Phone numbers  -->
             <dict>
