@@ -77,6 +77,8 @@
     },
 
 
+
+
     { 
       "name": "notes.tag",    
       "scope": "notes.tag",  
@@ -85,6 +87,7 @@
         "fontStyle" : "bold"
       }
     },
+
 
     { 
       "name": "notes.person.plussed",    
@@ -108,8 +111,18 @@
       "name": "notes.todo",    
       "scope": "notes.todo",  
       "settings": {
-        "foreground" : "#61AFEF", // 
+        "foreground" : "#ffffff", // 
         "fontStyle": "regular"
+      }
+    },
+
+
+    { 
+      "name": "notes.todo.brackets",    
+      "scope": "notes.todo.brackets",  
+      "settings": {
+        "foreground" : "#61AFEF",
+        "fontStyle" : "bold"        
       }
     },
 
@@ -121,6 +134,16 @@
         "fontStyle": "regular"
       }
     },
+
+    { 
+      "name": "notes.pling.quote.punctuation",    
+      "scope": "notes.pling.quote.punctuation",  
+      "settings": {
+        "foreground" : "#5C6370", // 
+        "fontStyle": "regular"
+      }
+    },
+
 
  { 
       "name": "notes.todo.done",    
@@ -151,7 +174,7 @@
       "name": "punctuation.definition",
       "scope": "punctuation.definition.string.begin,punctuation.definition.string.end",
       "settings": {
-        "foreground": "#98c378"
+        "foreground": "#5C6370"
       }
     },
     {
@@ -802,12 +825,31 @@
     },
     {
       "name": "Headings",
-      "scope": "markup.heading",
+      "scope": "markup.heading1",
       "settings": {
-        "fontStyle": "bold",
+        "fontStyle": "bold",        
+        "foreground": "#e06c75",
+        "fontSize" : "24dp"
+      }
+    },    
+    {
+      "name": "Headings",
+      "scope": "markup.heading2",
+      "settings": {
+        "fontStyle": "regular",
         "foreground": "#e06c75"
       }
     },
+    {
+      "name": "Headings",
+      "scope": "markup.heading3",
+      "settings": {
+        "fontStyle": "regular",
+        "foreground": "#e06c75"
+        
+      }
+    },
+
     {
       "name": "Headings",
       "scope": "markup.heading punctuation.definition.heading, entity.name.section",
@@ -860,10 +902,39 @@
       }
     },
     {
+      "name": "[VSCODE-CUSTOM] Markdown heading 2",
+      "scope": "entity.name.section.markdown.h2",
+      "settings": {
+        "foreground": "#E06C75",
+        "fontStyle" :"normal"
+        
+      }
+    },
+    {
+      "name": "[VSCODE-CUSTOM] Markdown heading 3",
+      "scope": "entity.name.section.markdown.h3",
+      "settings": {
+        "foreground": "#E06C75",
+        "fontStyle" :"normal"        
+      }
+    },
+
+    {
+      "name": "[VSCODE-CUSTOM] Markdown heading 1",
+      "scope": "entity.name.section.markdown.h1",
+      "settings": {
+        "foreground": "#E06C75",
+        // "foreground" : "#FFFFFF",
+        "fontStyle" : "bold", 
+        "fontSize" : "24dp"
+      }
+    },
+    {
       "name": "[VSCODE-CUSTOM] Markdown heading Punctuation Definition",
       "scope": "punctuation.definition.heading.markdown",
       "settings": {
-        "foreground": "#E06C75"        
+        "foreground": "#5C6370"       ,
+        "fontStyle" :"normal"
       }
     },
     {

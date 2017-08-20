@@ -60,23 +60,127 @@
 				<string>.\#\w+</string>
             </dict>  
 
-			<!-- Plussed names  -->
-            <dict>
+			<!-- primary headline  -->
+            <!-- <dict>
                 <key>name</key>
-                <string>notes.person.plussed</string>
+                <string>notes.h1</string>
+				<key>match</key>
+				<string># .+</string>
+            </dict>   -->
+
+			<!-- secondary headline  -->
+            <!-- <dict>
+                <key>name</key>
+                <string>notes.h2</string>
+				<key>match</key>
+				<string>\n(#{2} .+)</string>
+            </dict>   -->
+
+				<!--  +Name or +tag -->
+				<dict>
+					<key>begin</key>
+					<string>([+])</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>notes.pling.quote.punctuation</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>notes.person.plussed</string>
+					<key>end</key>
+					<string>[\b \n]</string>
+					<key>name</key>
+					<string>notes.person.plussed</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+
+
+        
+			<!-- TODOs  -->
+            <!-- <dict>
+                <key>name</key>
+                <string>notes.todo</string>
 
 				<key>match</key>
-				<string>\+[A-Za-z]+</string>
+				<string>\[ \].+</string>
             </dict>     
-
-			<!-- Direct quote names  -->
+			-->
             <dict>
                 <key>name</key>
-                <string>notes.pling.quote</string>
+                <string>notes.todo.done</string>
 
 				<key>match</key>
-				<string>`(.*?)`</string>
-            </dict>     
+				<string>\[x\].+</string>
+            </dict>      
+
+
+
+
+				<!--  - [ ] todo -->
+				<dict>
+					<key>begin</key>
+					<string>(\[ \])</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>notes.todo.brackets</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>notes.todo</string>
+					<key>end</key>
+					<string>[\b \n]</string>
+					<key>name</key>
+					<string>notes.todo</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+
+
+
+				<!--  `hejesahaa` -->
+				<dict>
+					<key>begin</key>
+					<string>(`)</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>notes.pling.quote.punctuation</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>notes.pling.quote</string>
+					<key>end</key>
+					<string>(`)</string>
+					<key>name</key>
+					<string>notes.pling.quote</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+
 
 
 
@@ -107,23 +211,6 @@
 				<string>\$(\d{1,3}(\,\d{3})*|(\d+))(\.\d{2})?</string>
             </dict>    
 
-
-        
-			<!-- TODOs  -->
-            <dict>
-                <key>name</key>
-                <string>notes.todo</string>
-
-				<key>match</key>
-				<string>\[ \].+</string>
-            </dict>     
-            <dict>
-                <key>name</key>
-                <string>notes.todo.done</string>
-
-				<key>match</key>
-				<string>\[x\].+</string>
-            </dict>     
 
 
 
@@ -198,6 +285,14 @@
 				<dict>
 					<key>include</key>
 					<string>#heading</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#heading2</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#heading3</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -439,7 +534,7 @@
 				<key>heading</key>
 				<dict>
 					<key>begin</key>
-					<string>(?:^|\G)[ ]{0,3}(#{1,6})\s*(?=[\S[^#]])</string>
+					<string>(?:^|\G)[ ]{0,3}(#{1})[^#]\s*</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
@@ -449,11 +544,11 @@
 						</dict>
 					</dict>
 					<key>contentName</key>
-					<string>entity.name.section.markdown</string>
+						<string>entity.name.section.markdown.h1</string>
 					<key>end</key>
-					<string>\s*(#{1,6})?$\n?</string>
+						<string>\s*(#{1})?$\n?</string>
 					<key>name</key>
-					<string>markup.heading.markdown</string>
+						<string>markup.heading1.markdown</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -462,6 +557,66 @@
 						</dict>
 					</array>
 				</dict>
+
+						<!-- heading  2-->
+				<key>heading2</key>
+				<dict>
+					<key>begin</key>
+					<string>(?:^|\G)[ ]{0,3}(#{2})\s*[^#]</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.heading.markdown</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>entity.name.section.markdown.h2</string>
+					<key>end</key>
+					<string>\s*(#{2})?$\n?</string>
+					<key>name</key>
+					<string>markup.heading2.markdown</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+
+
+			
+							<!-- heading  3, 4, 5, 6 all as 3-->
+				<key>heading3</key>
+				<dict>
+					<key>begin</key>
+					<string>(?:^|\G)[ ]{0,3}(#{3,6})\s*[^#]</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.heading.markdown</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>entity.name.section.markdown.h3</string>
+					<key>end</key>
+					<string>\s*(#{3,6})?$\n?</string>
+					<key>name</key>
+					<string>markup.heading3.markdown</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+
+
 
 
 				<!-- heading-setext -->
