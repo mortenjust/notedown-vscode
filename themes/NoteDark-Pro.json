@@ -837,7 +837,7 @@
       "scope": "markup.heading2",
       "settings": {
         "fontStyle": "regular",
-        "foreground": "#e06c75"
+        "foreground": "#a34d5a"
       }
     },
     {
@@ -845,7 +845,7 @@
       "scope": "markup.heading3",
       "settings": {
         "fontStyle": "regular",
-        "foreground": "#e06c75"
+        "foreground": "#a34d5a"
         
       }
     },
@@ -905,7 +905,7 @@
       "name": "[VSCODE-CUSTOM] Markdown heading 2",
       "scope": "entity.name.section.markdown.h2",
       "settings": {
-        "foreground": "#E06C75",
+        "foreground": "#a34d5a",
         "fontStyle" :"normal"
         
       }
@@ -914,7 +914,7 @@
       "name": "[VSCODE-CUSTOM] Markdown heading 3",
       "scope": "entity.name.section.markdown.h3",
       "settings": {
-        "foreground": "#E06C75",
+        "foreground": "#a34d5a",
         "fontStyle" :"normal"        
       }
     },
