@@ -212,20 +212,15 @@
             </dict>    
 
 
-
-
-
 			<!-- Capitalized words  -->
 			<!--less greedy (?<=\w[ ])([A-Z][a-zA-Z]*)  -->
-
 			
             <dict>
                 <key>name</key>
                 <string>notes.person</string>
 
 				<key>match</key>
-				<string>(?<=\w[ ])([A-Z].*?\b)</string>
-				
+				<string>(?<=[\wm,:;\-"' +][ (\[])([A-Z].*?\b)</string>				
             </dict>   
 
 	<!--(?<=\w[ ])([A-Z][a-z]*)  
