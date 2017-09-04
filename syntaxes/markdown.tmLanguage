@@ -157,7 +157,7 @@
 				<!--  `hejesahaa` -->
 				<dict>
 					<key>begin</key>
-					<string>(`)</string>
+					<string>(`)(?!`)</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
@@ -212,15 +212,81 @@
             </dict>    
 
 
-			<!-- Capitalized words  -->
+			<!-- Capitalized words: Names, cities, and so on  -->
 			<!--less greedy (?<=\w[ ])([A-Z][a-zA-Z]*)  -->
 			
             <dict>
                 <key>name</key>
-                <string>notes.person</string>
-
+                <string>notes.person.1</string>
 				<key>match</key>
-				<string>(?<=[\wm,:;\-"' +][ (\[])([A-Z].*?\b)</string>				
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][a-b].*?\b)</string>				
+            </dict>   
+
+            <dict>
+                <key>name</key>
+                <string>notes.person.2</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][c-d].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.3</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][e-f].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.4</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][g-h].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.5</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][i-j].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.6</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][k-l].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.7</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][m-n].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.8</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][o-p].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.9</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][q-r].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.10</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][s-t].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.11</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][u-v].*?\b)</string>				
+            </dict>   
+            <dict>
+                <key>name</key>
+                <string>notes.person.12</string>
+				<key>match</key>
+				<string>(?<=[\w,:;"' +][ (\[])([A-Z][w-z].*?\b)</string>				
             </dict>   
 
 	<!--(?<=\w[ ])([A-Z][a-z]*)  

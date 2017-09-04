@@ -71,12 +71,102 @@
       "name": "notes.person",    
       "scope": "notes.person",  
       "settings": {
-        "foreground" : "#61AFEF",
-        "fontSize" : "70px" //
+        "foreground" : "#61AFEF"
+      }
+    },
+
+    { 
+      "name": "notes.person.1",    
+      "scope": "notes.person.1",  
+      "settings": {
+        "foreground" : "#E67575"
+      }
+    },
+    { 
+      "name": "notes.person.2",    
+      "scope": "notes.person.2",  
+      "settings": {
+        "foreground" : "#E6A475"
+      }
+    },
+    { 
+      "name": "notes.person.3",    
+      "scope": "notes.person.3",  
+      "settings": {
+        "foreground" : "#E6D375"
+      }
+    },
+    { 
+      "name": "notes.person.4",    
+      "scope": "notes.person.4",  
+      "settings": {
+        "foreground" : "#9BE675"
+      }
+    },
+    { 
+      "name": "notes.person.5",    
+      "scope": "notes.person.5",  
+      "settings": {
+        "foreground" : "#75E6AD"
+      }
+    },
+    { 
+      "name": "notes.person.6",    
+      "scope": "notes.person.6",  
+      "settings": {
+        "foreground" : "#75E6DC"
+      }
+    },
+
+    { 
+      "name": "notes.person.7",    
+      "scope": "notes.person.7",  
+      "settings": {
+        "foreground" : "#75C0E6"
+      }
+    },
+    { 
+      "name": "notes.person.8",    
+      "scope": "notes.person.8",  
+      "settings": {
+        "foreground" : "#7591E6"
+      }
+    },
+
+    { 
+      "name": "notes.person.9",    
+      "scope": "notes.person.9",  
+      "settings": {
+        "foreground" : "#8875E6"
+      }
+    },
+
+    { 
+      "name": "notes.person.10",    
+      "scope": "notes.person.10",  
+      "settings": {
+        "foreground" : "#B775E6"
+      }
+    },
+
+    { 
+      "name": "notes.person.11",    
+      "scope": "notes.person.11",  
+      "settings": {
+        "foreground" : "#E675E6"
+      }
+    },
+
+    { 
+      "name": "notes.person.12",    
+      "scope": "notes.person.12",  
+      "settings": {
+        "foreground" : "#E675B7"
       }
     },
 
 
+// ----------------------------------------
 
 
     { 
