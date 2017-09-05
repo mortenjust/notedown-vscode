@@ -1,6 +1,52 @@
 
 {
-    "Create link to current file": { "prefix": "Link to current note", "body": "$TM_FILEPATH", "description": "Insert the link to this note" }, 
+
+"Hero's journey": { 
+    "prefix": ":hero's journey",
+    "body": [
+"${1:Ordinary world. Likable hero. Good life.}",
+"${5:Call to adventure. Glimpse of better. Hesitation. An itch they can't scratch. }",
+"${10:Refusal of the call}",
+"${15:Meeting the mentor. Magic tool. Insight. }",
+// "${20:Special world}",
+"${25:Crossing the threshold. Defeat guardian. }",
+"${30:Tests, allies, enemies. Not the main challenge. }",
+"${35:Approach. Refusal of return. Temptations to return. Meet goddess.  }",
+"${40:Ordeal, death, rebirth. }",
+"${45:Reward, seizing the sword}",
+// "Ordinary world",
+"${50:The road back}",
+"${55:Resurrection}",
+"${60:Return with elixir}"
+    ]
+},
+
+"Audience's journey": {
+
+    "prefix": ":Audience's journey - Nancy Duarte",
+    "body":[
+        "- ${10:A likable audience is unaware they have a problem or opportunity.}", 
+        "- ${20:They are shown a unique idea that brings their world into an imbalance.}",
+        "- ${30:They are skeptical, afraid, and resistant to adopt it because it will require change, and change is hard.}", 
+        "- ${40:But a presenter with experience, valuable insights, and magical tools will help on the journey. The audience will stay skeptical and won’t cross the threshold into your special perspective unless you have wisdom to guide them and a useful idea or tool to give them.}", 
+        "- ${50:So they decide to jump in and commit to the idea.}", 
+        "- ${60:Now the real work begins, but it’s hard. people and things oppose the effort to change.}", 
+        "- ${70:They are determined to push the idea forward and being to work on new skills to be successful.}", 
+        "- ${80:They take a major step toward your idea, and it doesn’t quite work out as they’d thought.}", 
+        "- ${90:They get discouraged and consider giving up on the idea, but they begin to see some benefit from their effort.}", 
+        "- ${100:They decide to continue on with a renewed excitement, even though resistance around them is chronic.}", 
+        "- ${110:Utilizing their new tools, they try one final time to push the idea forward and are victorious.}", 
+        "- ${120:The idea is widely adopted and the galaxy is a better place.}"
+    ]
+
+}
+
+
+
+
+
+
+ 
     "Insert ☠ Skull and Crossbones": { "prefix": ":emoji-Skull and Crossbones ☠", "body": "☠", "description": "Insert ☠ Skull and Crossbones" }, 
 "Insert 🛀 Person Taking Bath": { "prefix": ":emoji-Person Taking Bath 🛀", "body": "🛀", "description": "Insert 🛀 Person Taking Bath" }, 
 "Insert 🛌 Person in Bed": { "prefix": ":emoji-Person in Bed 🛌", "body": "🛌", "description": "Insert 🛌 Person in Bed" }, 
